@@ -9,7 +9,8 @@
     flex-direction: column;
     align-items: center;    
     margin-top: 50px;
-
+    padding: 0 20px;
+    width: 100%;
 }
 
 .todoHeading{
@@ -17,13 +18,22 @@
     margin-bottom: 20px;
 }
 
+span{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+}
+
 .inputBox{
     padding: 10px;
-    width: 300px;
+    flex: 1;
+    min-width: 200px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-right: 10px;
     
 }
 
@@ -35,17 +45,21 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .item{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin-bottom: 10px;
     background-color: #609edc43;
     padding:10px;
     border-radius: 5px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .addBtn:hover{
@@ -55,6 +69,10 @@
 .taskList{
     list-style-type: none;
     margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .taskText{
@@ -78,14 +96,17 @@
 .toggled{
     text-decoration:line-through;
     background-color: #4775a243;
-     display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin-bottom: 10px;
     background-color: #609edc43;
     padding:10px;
     border-radius: 5px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 .notask{
     margin-top: 20px;
@@ -122,5 +143,162 @@
     color: inherit;
     flex: 1;
     padding: 0;
+    min-width: 150px;
+}
+
+/* Tablet and above (768px) - Desktop view */
+@media (min-width: 768px) {
+    .mainDiv {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    .todoHeading {
+        font-size: 36px;
+    }
+
+    span {
+        flex-wrap: nowrap;
+        max-width: none;
+    }
+
+    .inputBox {
+        width: 300px;
+    }
+
+    .item,
+    .toggled {
+        width: 400px;
+        max-width: 400px;
+        flex-wrap: nowrap;
+    }
+}
+
+/* Large screens (1024px and above) */
+@media (min-width: 1024px) {
+    .mainDiv {
+        margin-top: 50px;
+    }
+
+    .todoHeading {
+        font-size: 36px;
+    }
+}
+
+/* Small screens (480px and below) */
+@media (max-width: 480px) {
+    .mainDiv {
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+
+    .todoHeading {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    span {
+        width: 100%;
+        max-width: none;
+        gap: 8px;
+    }
+
+    .inputBox {
+        flex: 1;
+        min-width: calc(100% - 68px);
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .addBtn {
+        padding: 8px 16px;
+        font-size: 14px;
+        flex-shrink: 0;
+    }
+
+    .item,
+    .toggled {
+        width: 100%;
+        max-width: none;
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .deleteBtn,
+    .editBtn {
+        padding: 4px 8px;
+        font-size: 12px;
+        margin-right: 5px;
+    }
+
+    .editInput {
+        min-width: 100px;
+        font-size: 14px;
+    }
+
+    .notask {
+        font-size: 16px;
+    }
+
+    .saveBtn {
+        margin-left: 5px;
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+/* Medium screens (481px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .mainDiv {
+        margin-top: 40px;
+        padding: 0 15px;
+    }
+
+    .todoHeading {
+        font-size: 32px;
+        margin-bottom: 18px;
+    }
+
+    span {
+        width: 100%;
+        max-width: none;
+        gap: 10px;
+    }
+
+    .inputBox {
+        flex: 1;
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    .addBtn {
+        padding: 9px 18px;
+        font-size: 15px;
+    }
+
+    .item,
+    .toggled {
+        width: 100%;
+        max-width: none;
+        padding: 9px;
+        gap: 10px;
+    }
+
+    .deleteBtn,
+    .editBtn {
+        padding: 4px 10px;
+        font-size: 13px;
+        margin-right: 7px;
+    }
+
+    .notask {
+        font-size: 17px;
+    }
+
+    .saveBtn {
+        margin-left: 7px;
+        padding: 4px 10px;
+        font-size: 13px;
+    }
 }
 
