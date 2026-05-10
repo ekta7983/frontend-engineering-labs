@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin-top: 50px;
+
+}
+
+.todoHeading{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.inputBox{
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    
+}
+
+.addBtn{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 10px;
+    background-color: #609edc43;
+    padding:10px;
+    border-radius: 5px;
+}
+
+.addBtn:hover{
+    background-color: #0056b3;
+}
+
+.taskList{
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.taskText{
+    text-decoration: none;
+}
+
+.deleteBtn{
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.deleteBtn:hover{
+    background-color: #c82333;
+}
+
+.toggled{
+    text-decoration:line-through;
+    background-color: #4775a243;
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 10px;
+    background-color: #609edc43;
+    padding:10px;
+    border-radius: 5px;
+}
+.notask{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #33a41a;
+}
+.editBtn{
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.saveBtn{
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #0e662a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.editInput{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    color: inherit;
+    flex: 1;
+    padding: 0;
+}
+
