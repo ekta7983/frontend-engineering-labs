@@ -1,0 +1,39 @@
+body{
+    text-align:center;
+    font-family:Arial;
+}
+
+canvas{
+    border:2px solid black;
+    background-color:#000000;
+    
+}
+
+.hidden{
+    display:none;
+}
+
+#gameOverCard{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+
+    width:400px;
+    margin:20px auto;
+    padding:20px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+#restart-btn{
+    padding:10px 20px;
+    font-size:16px;
+    background-color:#078298;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
